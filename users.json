@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "locked": false,
+        "login": "vasya",
+        "name": "Вася Пупкин",
+        "password": "123"
+    },
+    {
+        "id": 2,
+        "locked": false,
+        "login": "zmey",
+        "name": "Горыныч",
+        "password": "qwerty"
+    },
+    {
+        "id": 3,
+        "locked": false,
+        "login": "kgg",
+        "name": "Greg",
+        "password": "void"
+    },
+    {
+        "id": 7,
+        "locked": false,
+        "login": "babay",
+        "name": "Бабайка",
+        "password": "999"
+    },
+    {
+        "id": 10,
+        "locked": false,
+        "login": "Json",
+        "name": "Джейсон",
+        "password": "888"
+    },
+    {
+        "id": 12,
+        "locked": false,
+        "login": "ivan",
+        "name": "Петров Е.С.",
+        "password": "ivan"
+    },
+    {
+        "id": 13,
+        "locked": false,
+        "login": "petrov",
+        "name": "Иванов Иван Иванович",
+        "password": "petrov"
+    }
+]
