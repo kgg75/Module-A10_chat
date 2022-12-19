@@ -25,7 +25,7 @@ string lowercase_s(const string& _str) {	// преобразование строки в нижний регис
 
 
 bool check_empty_name(const string& _str, const string& _subject) {	// проверки строки на пустоту
-	if (_str == "") {
+	if (_str.empty()) {
 		cout << "Ошибка - " << _subject << " не может быть пустым.\n";
 		return false;
 	}
@@ -43,7 +43,9 @@ bool check_spaces(const string& _str, const string& _subject) {	// проверки стро
 
 
 bool check_name(const string& _str, const string& _subject, const int& _minLength, const int& _maxLength) {	// проверки строки на пустоту, минимальную/максимальную длину
-	if (!check_empty_name(_str, _subject) || (_str.size() < _minLength) || (_str.size() > _maxLength)) {
+	if (!check_empty_name(_str, _subject))
+		return false;
+	if ((_str.size() < _minLength) || (_str.size() > _maxLength)) {
 		cout << "Ошибка - длина значения вне допустимого диапазона [" << _minLength << "-" <<_maxLength << "].\n";
 		return false;
 	}
@@ -62,7 +64,7 @@ std::string get_value_from_console() {	// получение значения с консоли
 
 std::string get_string_from_console() {	// получение строки с консоли и её очистка от начальных и конечных пробелов
 	std::string str;
-	while (str == "")
+	while (str.empty())
 		std::getline(cin, str);
 	str.erase(0, str.find_first_not_of(' '));
 	str.erase(str.find_last_not_of(' ') + 1, str.length());

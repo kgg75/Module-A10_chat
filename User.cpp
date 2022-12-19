@@ -3,9 +3,9 @@
 
 
 User::User(const int _id,
-	const std::string _name,
-	const std::string _login,
-	const std::string _password,
+	const std::string& _name,
+	const std::string& _login,
+	const std::string& _password,
 	const bool _locked,
 	const bool _logged)
 	:

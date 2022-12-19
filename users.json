@@ -38,14 +38,14 @@
         "id": 12,
         "locked": false,
         "login": "ivan",
-        "name": "Петров Е.С.",
+        "name": "Иванов Иван Иванович",
         "password": "ivan"
     },
     {
         "id": 13,
         "locked": false,
         "login": "petrov",
-        "name": "Иванов Иван Иванович",
+        "name": "Петров Е.С.",
         "password": "petrov"
     }
 ]

@@ -14,7 +14,7 @@ class Users {
 		void CheckArraySize();	// проверка наличия свободного места в векторе и его увеличение при необходимости
 	public:
 		Users();
-		~Users();
+		//~Users();
 		bool NewUser();	// регистрация нового пользователя
 		bool Login();	// вход пользователя в чат
 		void Logout();	// выход пользователя из чата
@@ -23,13 +23,13 @@ class Users {
 		bool Save();	// сохранение данных пользователей во внешний файл
 		bool DeleteUser();	// удаление учётной записи пользователя
 		void Show();	// отображение данных текущего пользователя
-		void Show(const int& _user_index);	// отображение данных указанного пользователя
+		void Show(const int _user_index);	// отображение данных указанного пользователя
 		// getters
 		int GetCurrentUser() const;	// порядковый номер текущего пользователя
 		int GetUserId() const;	// id текущего пользователя
-		int GetUserId(const int& _user_index) const;	// id указанного пользователя
+		int GetUserId(const int _user_index) const;	// id указанного пользователя
 		std::string GetUserLogin() const;	// login текущего пользователя
-		std::string GetUserLogin(const int& _id) const;	// login указанного пользователя
+		std::string GetUserLogin(const int _id) const;	// login указанного пользователя
 		bool GetIsChanged() const;	// возврат флага наличия изменений в данных пользователей
 };
 

@@ -30,7 +30,7 @@ Messages::~Messages() {
 }
 
 
-bool Messages::Add(const int& _senderId, const std::string& _senderLogin, const int& _receiverId, const std::string& _receiverLogin) {	// добавление сообщени€
+bool Messages::Add(const int _senderId, const std::string& _senderLogin, const int _receiverId, const std::string& _receiverLogin) {	// добавление сообщени€
 	CheckArraySize();
 
 	cout << "¬ведите текст сообщени€: ";
@@ -46,7 +46,7 @@ bool Messages::Add(const int& _senderId, const std::string& _senderLogin, const 
 }
 
 
-int Messages::Find(const int& _receiverId) const {	// подсчЄт непрочитанных сообщений
+int Messages::Find(const int _receiverId) const {	// подсчЄт непрочитанных сообщений
 	int count = 0;
 	for (int i = 0; i < msgsCount; i++)
 		if ((message[i].receiverId == _receiverId) && (!message[i].wasReaded))
@@ -55,7 +55,7 @@ int Messages::Find(const int& _receiverId) const {	// подсчЄт непрочитанных сооб
 }
 
 
-void Messages::Read(const int& _receiverId, const bool& _showUnReadedOnly) {	// вывод сообщений
+void Messages::Read(const int _receiverId, const bool _showUnReadedOnly) {	// вывод сообщений
 	for (int i = 0; i < msgsCount; i++) {
 		if ((message[i].receiverId == _receiverId) && (!_showUnReadedOnly || (!message[i].wasReaded))) {
 			cout << "#" << message[i].id << " " << message[i].date_time << " от " << message[i].senderLogin << ": " << message[i].text << '\n';

@@ -11,9 +11,9 @@ struct User {
 	bool logged = false;	// флаг, указывающий на вход пользователя
 
 	User(const int id,
-		const std::string name,
-		const std::string login,
-		const std::string password,
+		const std::string& name,
+		const std::string& login,
+		const std::string& password,
 		const bool locked = false,
 		const bool logged = false);
 };

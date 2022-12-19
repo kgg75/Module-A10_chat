@@ -33,8 +33,7 @@ Users::Users() {
 }
 
 
-Users::~Users() {
-}
+//Users::~Users() {}
 
 
 bool Users::NewUser() {	// регистрация нового пользователя
@@ -172,6 +171,7 @@ bool Users::Open() {	// чтение данных пользователей и�
 	}
 	catch (exception& e) {
 		cout << e.what() << endl;
+		cout << "Ошибка чтения файла данных!\n";	// ошибка будет при первом запуске чата, т.к. данные ещё не ни разу сохранялись
 		result = false;
 	}
 	users_data.close();
@@ -203,6 +203,7 @@ bool Users::Save() {	// сохранение данные пользовател
 	}
 	catch (exception& e) {
 		cout << e.what() << endl;
+		cout << "Ошибка записи данных в файл!\n";
 		result = false;
 	}
 	users_data.close();
@@ -215,7 +216,7 @@ void Users::Show() {	// отображение данных текущего п�
 }
 
 
-void Users::Show(const int& _user_index) {	// отображение данных указанного пользователя
+void Users::Show(const int _user_index) {	// отображение данных указанного пользователя
 	cout << "\tid \t= " << user[_user_index].id << endl;
 	cout << "\tname\t= " << user[_user_index].name << endl;
 	cout << "\tlogin\t= " << user[_user_index].login << endl;
@@ -234,7 +235,7 @@ int Users::GetUserId() const {	// id текущего пользователя
 	return user[currentUser].id;
 }
 
-int Users::GetUserId(const int& _user_index) const {	// id указанного пользователя
+int Users::GetUserId(const int _user_index) const {	// id указанного пользователя
 	return user[_user_index].id;
 }
 
@@ -244,7 +245,7 @@ std::string Users::GetUserLogin() const {	// login текущего пользо
 }
 
 
-std::string Users::GetUserLogin(const int& _id) const {	// login указанного пользователя
+std::string Users::GetUserLogin(const int _id) const {	// login указанного пользователя
 	for (int i=0; i < usersCount; i++)
 		if (user[i].id == _id)
 			return user[i].login;

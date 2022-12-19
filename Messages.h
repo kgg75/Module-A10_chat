@@ -13,9 +13,9 @@ class Messages {
 	public:
 		Messages();
 		~Messages();
-		bool Add(const int& _senderId, const std::string& _senderLogin, const int& _receiverId, const std::string& _receiverLogin);	// добавление сообщения
-		int Find(const int& _receiverId) const;	// подсчёт непрочитанных сообщений
-		void Read(const int& _receiverId, const bool& _showUnReadedOnly);	// вывод сообщений
+		bool Add(const int _senderId, const std::string& _senderLogin, const int _receiverId, const std::string& _receiverLogin);	// добавление сообщения
+		int Find(const int _receiverId) const;	// подсчёт непрочитанных сообщений
+		void Read(const int _receiverId, const bool _showUnReadedOnly);	// вывод сообщений
 		bool Open();	// загрузка сообщений из внешнего файла
 		bool Save();	// сохрание сообщенией во внешний файл
 		int GetLastMsgId() const;

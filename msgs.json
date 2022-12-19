@@ -143,7 +143,7 @@
         "date_time": "[2022-12-17 21:25:43]",
         "id": 14,
         "receiverId": 13,
-        "receiverLogin": "",
+        "receiverLogin": "petrov",
         "senderId": 2,
         "senderLogin": "zmey",
         "text": "повторное сообщение Петрову от змея",
@@ -153,10 +153,20 @@
         "date_time": "[2022-12-17 21:27:46]",
         "id": 15,
         "receiverId": 13,
-        "receiverLogin": "",
+        "receiverLogin": "petrov",
         "senderId": 12,
         "senderLogin": "ivan",
         "text": "сообщение Петрову от Ивана",
+        "wasReaded": false
+    },
+    {
+        "date_time": "[2022-12-19 10:57:36]",
+        "id": 16,
+        "receiverId": 1,
+        "receiverLogin": "vasya",
+        "senderId": 13,
+        "senderLogin": "petrov",
+        "text": "Вася, привет от Петрова!",
         "wasReaded": false
     }
 ]
